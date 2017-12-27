@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="petrol_exp@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="petrol_exp">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="aa"/>
+    <schema id="4" parent="1" name="books"/>
+    <schema id="5" parent="1" name="books_db"/>
+    <schema id="6" parent="1" name="careercenter"/>
+    <schema id="7" parent="1" name="contactdb"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="jobdb"/>
+    <schema id="10" parent="1" name="library"/>
+    <schema id="11" parent="1" name="mysql"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="phpmyadmin"/>
+    <schema id="14" parent="1" name="salon"/>
+    <schema id="15" parent="1" name="school_schedule"/>
+    <schema id="16" parent="1" name="student"/>
+    <schema id="17" parent="1" name="studentdb"/>
+    <schema id="18" parent="1" name="student_db"/>
+    <schema id="19" parent="1" name="test"/>
+    <schema id="20" parent="1" name="test_db"/>
+    <schema id="21" parent="1" name="university"/>
+    <schema id="22" parent="1" name="university_db"/>
+    <schema id="23" parent="1" name="user"/>
+    <schema id="24" parent="1" name="users"/>
+    <schema id="25" parent="1" name="usersdb"/>
+    <schema id="26" parent="1" name="myusers"/>
+    <table id="27" parent="2" name="exp_inf"/>
+    <table id="28" parent="2" name="petrol_inf"/>
+    <column id="29" parent="27" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="27" name="Date">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="27" name="Brand">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="32" parent="27" name="Mileage">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="27" name="G_quantity">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="27" name="Cost">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="35" parent="27" name="Brand">
+      <ColNames>Brand</ColNames>
+    </index>
+    <key id="36" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="37" parent="27" name="exp_inf_ibfk_1">
+      <ColNames>Brand</ColNames>
+      <RefSchemaName>petrol_exp</RefSchemaName>
+      <RefTableName>petrol_inf</RefTableName>
+      <RefColNames>Brand</RefColNames>
+    </foreign-key>
+    <column id="38" parent="28" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="39" parent="28" name="Brand">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="28" name="Price">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="41" parent="28" name="Brand">
+      <ColNames>Brand</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="43" parent="28" name="Brand">
+      <ColNames>Brand</ColNames>
+      <UnderlyingIndexName>Brand</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
